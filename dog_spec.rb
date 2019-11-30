@@ -28,4 +28,12 @@ RSpec.describe Dog do
       expect(dog).to_not be_hungry
     end
   end
+
+  describe '#wag_tail' do
+    it 'returns true if tail is wagging' do
+      dog = described_class.new(tail_wagging: false)
+
+      expect(dog.wag_tail).to eql(true)
+    end
+  end
 end

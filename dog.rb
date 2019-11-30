@@ -1,6 +1,7 @@
 class Dog
-  def initialize(hunger_level: 0)
+  def initialize(hunger_level: 0, tail_wagging: false)
     @hunger_level = hunger_level
+    @tail_wagging = tail_wagging
   end
 
   def bark
@@ -13,5 +14,9 @@ class Dog
 
   def feed
     @hunger_level = 0
+  end
+
+  def wag_tail
+    @tail_wagging = true
   end
 end
