@@ -1,7 +1,14 @@
 class Dog
+  @@all = []
+
   def initialize(hunger_level: 0, tail_wagging: false)
     @hunger_level = hunger_level
     @tail_wagging = tail_wagging
+    @@all << self
+  end
+
+  def self.all
+    @@all
   end
 
   def bark

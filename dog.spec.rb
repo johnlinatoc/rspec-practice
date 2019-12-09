@@ -2,6 +2,16 @@ require 'rspec'
 require_relative 'dog'
 
 RSpec.describe Dog do
+
+  describe 'Dog.all' do
+    it 'returns all instances of Dog' do
+      max = Dog.new
+      fido = Dog.new
+      boy = Dog.new
+      expect(Dog.all).to include(max, fido, boy)
+    end
+  end
+
   describe '#bark' do
     it 'returns the string "Woof!"' do
       expect(subject.bark).to eql('Woof!')
